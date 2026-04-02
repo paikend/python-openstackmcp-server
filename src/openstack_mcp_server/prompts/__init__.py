@@ -7,14 +7,14 @@ def register_prompt(mcp: FastMCP):
     """
 
     @mcp.prompt()
-    def get_instances_by_security_group(security_group_name: str) -> str:
+    def get_servers_by_security_group(security_group_name: str) -> str:
         """
-        Get instances associated with a specific security group.
+        Get servers associated with a specific security group.
 
-        :param security_group_name: The name of the security group to filter instances by.
+        :param security_group_name: The name of the security group to filter servers by.
         """
         return (
-            f"Find all compute instances that have the security group "
+            f"Find all compute servers that have the security group "
             f"'{security_group_name}' attached.\n\n"
             f"Steps:\n"
             f"1. Call get_servers to list all servers.\n"
